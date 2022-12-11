@@ -11,7 +11,8 @@ class ArithmeticScreen extends StatefulWidget {
 class _ArithmeticScreenState extends State<ArithmeticScreen> {
   final _firstController = TextEditingController(text: '1');
   final _secondController = TextEditingController();
-  int result = 0;
+  int? result = 0;
+  int? result_sub = 0;
 
   final _globalKey = GlobalKey<FormState>();
 
@@ -90,6 +91,30 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   ),
                 ),
               ),
+              //radio
+              RadioListTile(
+                title: const Text("Add"),
+                value: 1,
+                groupValue: result,
+                onChanged: (value) {
+                  setState(() {
+                    result = int.parse(_firstController.text) +
+                        int.parse(_secondController.text);
+                  });
+                },
+              ),
+              RadioListTile(
+                title: const Text("sub"),
+                value: 'sub',
+                groupValue: result,
+                onChanged: (value) {
+                  setState(() {
+                    result = int.parse(_firstController.text) -
+                        int.parse(_secondController.text);
+                  });
+                },
+              ),
+
               Text(
                 'calculation is $result',
                 style: const TextStyle(

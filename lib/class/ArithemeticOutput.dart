@@ -31,7 +31,7 @@ class _ArithmeticOutputScreenState extends State<ArithmeticOutputScreen> {
                   _continue();
                 },
                 child: const Text(
-                  'Result',
+                  'continue',
                   style: TextStyle(
                     fontSize: 30,
                   ),
