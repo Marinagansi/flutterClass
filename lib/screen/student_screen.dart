@@ -33,6 +33,7 @@ class _StudentDetailsScreenState extends State<StudentDetailsScreen> {
 
   final formGlobalKey = GlobalKey<FormState>();
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,7 +189,6 @@ class _StudentDetailsScreenState extends State<StudentDetailsScreen> {
                             gender: gender,
                             city: _dropdownController.value,
                           );
-
                           _addStudentToList(student);
                           debugPrint(lstStudents!.length.toString());
                         }
