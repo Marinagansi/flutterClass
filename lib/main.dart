@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:smartphone/screen/login.dart';
+import 'package:smartphone/screen/splash_screen.dart';
+import 'package:smartphone/theme/theme_data.dart';
 import 'screen/display.dart';
-import 'screen/calculator.dart';
-import 'screen/grid_screen.dart';
-import 'screen/datatable_Screen.dart';
-import 'screen/stack_screen.dart';
-import 'screen/image_stack.dart';
-import 'screen/bottom_navigation.dart';
 
 void main() {
   runApp(
@@ -13,9 +10,12 @@ void main() {
         debugShowCheckedModeBanner: false,
         title: 'Flutter for class',
         initialRoute: '/',
+        theme: getaApplicationTheme(),
         routes: {
-          '/': (context) => const BottomNavigation(),
-          // '/': (context) => const ImageStack(),
+          '/': (context) => const SplashScreen(),
+         '/LoginPage': (context) => const LoginPage(),
+          // '/': (context) => const BottomNavigation(),
+          //'/': (context) => const ImageStack(),
           // '/': (context) => const StackScreen(),
           //'/': (context) => const datatableScreen(),
           // '/': (context) => const CalculatorScreen(),
