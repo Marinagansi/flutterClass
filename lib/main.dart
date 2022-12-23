@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartphone/screen/clock_screen.dart';
 import 'package:smartphone/screen/login.dart';
 import 'package:smartphone/screen/splash_screen.dart';
 import 'package:smartphone/theme/theme_data.dart';
@@ -12,8 +13,9 @@ void main() {
         initialRoute: '/',
         theme: getaApplicationTheme(),
         routes: {
-          '/': (context) => const SplashScreen(),
-         '/LoginPage': (context) => const LoginPage(),
+          '/': (context) => const ClockScreen(),
+         // '/': (context) => const SplashScreen(),
+        // '/LoginPage': (context) => const LoginPage(),
           // '/': (context) => const BottomNavigation(),
           //'/': (context) => const ImageStack(),
           // '/': (context) => const StackScreen(),

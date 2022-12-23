@@ -40,6 +40,7 @@ dependencies:
   fluttertoast: ^8.1.1
   motion_toast: ^2.6.4
   dropdown_plus: ^0.0.9
+  objectbox: ^1.7.0
 
 dev_dependencies:
   flutter_test:
